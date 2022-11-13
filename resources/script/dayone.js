@@ -31,7 +31,68 @@ $done({body: JSON.stringify({
 } 
 else { let body= $response.body;
 	     let obj= JSON.parse(body);
-	     const feature= {"bundleName":"premium","features":[{"name":"imagesPerEntry","limit":30,"canUpgrade":false},{"name":"printingDiscount","canUpgrade":false},{"name":"syncMac","canUpgrade":false},{"name":"prioritySupport","canUpgrade":false},{"name":"sync","canUpgrade":false},{"name":"journalLimit","limit":100,"canUpgrade":false},{"name":"audioPerEntry","limit":10,"canUpgrade":false},{"name":"drawPerEntry","limit":10,"canUpgrade":false},{"name":"videoPerEntry","limit":10,"canUpgrade":false}]};
+	     const feature= {"bundleName":"premium","features":[{"name":"imagesPerEntry","limit":30,"canUpgrade":false},{"name":"printingDiscount","canUpgrade":false},{"name":"syncMac","canUpgrade":false},{"name":"prioritySupport","canUpgrade":false},{"name":"sync","canUpgrade":false},{"name":"journalLimit","limit":100,"canUpgrade":false},{"name":"audioPerEntry","limit":10,"canUpgrade":false},
+      {
+        "name": "scanToPDF",
+        "enabled": true,
+        "canUpgrade": false
+      },
+      {
+        "name": "attachmentsPerEntry",
+        "limit": 100,
+        "canUpgrade": false
+      },
+      {
+        "name": "journalViaSMS",
+        "enabled": true,
+        "canUpgrade": false
+      },
+      
+      {
+        "name": "canAttachVideo",
+        "enabled": true,
+        "canUpgrade": false
+      },
+      {
+        "name": "canAttachAudio",
+        "enabled": true,
+        "canUpgrade": false
+      },
+      {
+        "name": "canAttachDrawing",
+        "enabled": true,
+        "canUpgrade": false
+      },
+      {
+        "name": "canAttachPDF",
+        "enabled": true,
+        "canUpgrade": false
+      },
+      {
+        "name": "colors",
+        "enabled": true,
+        "canUpgrade": false
+      },
+      {
+        "name": "emailToJournal",
+        "enabled": true,
+        "canUpgrade": false
+      },
+      {
+        "name": "appIcons",
+        "enabled": true,
+        "canUpgrade": false
+      },
+      {
+        "name": "moonPhase",
+        "enabled": true,
+        "canUpgrade": false
+      },
+      {
+        "name": "foursquareNearbyVenues",
+        "enabled": true,
+        "canUpgrade": false
+      }]};
     if(body.indexOf("featureBundle") !=-1)
       {
       obj["featureBundle"]= feature;
