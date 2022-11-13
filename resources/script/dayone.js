@@ -31,7 +31,7 @@ $done({body: JSON.stringify({
 } 
 else { let body= $response.body;
 	     let obj= JSON.parse(body);
-	     const feature= {"bundleName":"premium","features":[{"name":"imagesPerEntry","limit":30,"canUpgrade":false},{"name":"printingDiscount","canUpgrade":false},{"name":"syncMac","canUpgrade":false},{"name":"prioritySupport","canUpgrade":false},{"name":"sync","canUpgrade":false},{"name":"journalLimit","limit":100,"canUpgrade":false},{"name":"audioPerEntry","limit":10,"canUpgrade":false},{"name":"scanToPDF","limit":null,"canUpgrade":false}]};
+	     const feature= {"bundleName":"premium","features":[{"name":"imagesPerEntry","limit":30,"canUpgrade":false},{"name":"printingDiscount","canUpgrade":false},{"name":"syncMac","canUpgrade":false},{"name":"prioritySupport","canUpgrade":false},{"name":"sync","canUpgrade":false},{"name":"journalLimit","limit":100,"canUpgrade":false},{"name":"audioPerEntry","limit":10,"canUpgrade":false}{"name":"drawingPerEntry","limit":10,"canUpgrade":false},{"name":"videoPerEntry","limit":10,"canUpgrade":false}]};
     if(body.indexOf("featureBundle") !=-1)
       {
       obj["featureBundle"]= feature;
