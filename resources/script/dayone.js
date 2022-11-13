@@ -31,7 +31,37 @@ $done({body: JSON.stringify({
 } 
 else { let body= $response.body;
 	     let obj= JSON.parse(body);
-	     const feature= {"bundleName":"premium","features":[{"name":"imagesPerEntry","limit":30,"canUpgrade":false},{"name":"printingDiscount","canUpgrade":false},{"name":"syncMac","canUpgrade":false},{"name":"prioritySupport","canUpgrade":false},{"name":"sync","canUpgrade":false},{"name":"journalLimit","limit":100,"canUpgrade":false},{"name":"audioPerEntry","limit":10,"canUpgrade":false},{"name":"video","limit":10,"canUpgrade":false},{"name":"drawing","limit":10,"canUpgrade":false},
+	     const feature= {"bundleName":"premium","featuresFull": [
+      {
+        "name": "journalLimit",
+        "limit": 100,
+        "canUpgrade": false
+      },
+      {
+        "name": "backup",
+        "enabled": true,
+        "canUpgrade": false
+      },
+      {
+        "name": "sync",
+        "enabled": true,
+        "canUpgrade": false
+      },
+      {
+        "name": "discountedSubscription",
+        "enabled": false,
+        "canUpgrade": false
+      },
+      {
+        "name": "printingDiscount",
+        "enabled": true,
+        "canUpgrade": false
+      },
+      {
+        "name": "prioritySupport",
+        "enabled": true,
+        "canUpgrade": false
+      },
       {
         "name": "scanToPDF",
         "enabled": true,
@@ -39,7 +69,7 @@ else { let body= $response.body;
       },
       {
         "name": "attachmentsPerEntry",
-        "limit": 100,
+        "limit": 30,
         "canUpgrade": false
       },
       {
@@ -47,7 +77,11 @@ else { let body= $response.body;
         "enabled": true,
         "canUpgrade": false
       },
-      
+      {
+        "name": "canAttachPhoto",
+        "enabled": true,
+        "canUpgrade": false
+      },
       {
         "name": "canAttachVideo",
         "enabled": true,
@@ -65,6 +99,16 @@ else { let body= $response.body;
       },
       {
         "name": "canAttachPDF",
+        "enabled": true,
+        "canUpgrade": false
+      },
+      {
+        "name": "instagram",
+        "enabled": true,
+        "canUpgrade": false
+      },
+      {
+        "name": "ifttt",
         "enabled": true,
         "canUpgrade": false
       },
@@ -92,7 +136,65 @@ else { let body= $response.body;
         "name": "foursquareNearbyVenues",
         "enabled": true,
         "canUpgrade": false
-      }]};
+      }
+    ],
+    "features": [
+      {
+        "name": "imagesPerEntry",
+        "limit": 30,
+        "canUpgrade": false
+      },
+      {
+        "name": "journalLimit",
+        "limit": 100,
+        "canUpgrade": false
+      },
+      {
+        "name": "audioPerEntry",
+        "limit": 10,
+        "canUpgrade": false
+      },
+      {
+        "name": "sync",
+        "limit": null,
+        "canUpgrade": false
+      },
+      {
+        "name": "backup",
+        "limit": null,
+        "canUpgrade": false
+      },
+      {
+        "name": "printingDiscount",
+        "limit": null,
+        "canUpgrade": false
+      },
+      {
+        "name": "prioritySupport",
+        "limit": null,
+        "canUpgrade": false
+      },
+      {
+        "name": "drawingsPerEntry",
+        "limit": 30,
+        "canUpgrade": false
+      },
+      {
+        "name": "scanToPDF",
+        "limit": 30,
+        "canUpgrade": false
+      },
+      {
+        "name": "videosPerEntry",
+        "limit": 30,
+        "canUpgrade": false
+      },
+      {
+        "name": "journalViaSMS",
+        "limit": null,
+        "canUpgrade": false
+      }
+    ]};
     if(body.indexOf("featureBundle") !=-1)
       {
       obj["featureBundle"]= feature;
