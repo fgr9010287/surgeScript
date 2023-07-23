@@ -1,0 +1,26 @@
+#!name=我的模块
+#!desc=我的模块
+
+[Script]
+
+#Notability
+notability.js = type=http-response,pattern=^https?:\/\/notability\.com\/subscriptions,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/notability.js
+
+#sorted
+sorted = type=http-response,pattern=^https?:\/\/api\.sortedapp\.com\/receipts,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/fgr9010287/surgeScript/main/resources/script/sorted.js
+
+# 西窗烛
+xcz.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/fgr9010287/surgeScript/main/resources/script/xcz.js,type=http-response,pattern=https?:\/\/lchttpapi\.xczim\.com\/1\.1\/
+
+# 通用订阅
+verify_receipt.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/fgr9010287/surgeScript/main/resources/script/verify_receipt.js,type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
+
+# Xmind
+xmind.js = script-path=https://raw.githubusercontent.com/fgr9010287/surgeScript/main/resources/script/xmind.js,requires-body=1,type=http-response,pattern=https?:\/\/www\.xmind\.net\/_res\/,max-size=0
+
+# 专注笔记
+focusnote.js = type=http-response,pattern=^https:\/\/fn\.kirakuapp\.com\/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/fgr9010287/surgeScript/main/resources/script/focusnote.js
+
+[MITM]
+
+hostname = %APPEND% api.revenuecat.com, fn.kirakuapp.com, www.xmind.net, buy.itunes.apple.com, lchttpapi.xczim.com, api.sortedapp.com, notability.com
